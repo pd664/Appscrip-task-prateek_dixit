@@ -119,7 +119,6 @@ const Navbar = () => {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1625 10.87C12.0625 16.4425 6.44C16.4325 8.84 14.5425 10.79 12.1625 10.87Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
-                        <span>Profile</span>
                     </button>
                     <div className={styles.languageMobile}>
                         <span>Language:</span>
