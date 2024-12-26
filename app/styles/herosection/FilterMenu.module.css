@@ -1,0 +1,114 @@
+.filterWrapper {
+    position: relative;
+    font-family: Arial, sans-serif;
+    padding: 2% 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(232, 229, 229);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.filterHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    gap: 10rem;
+}
+
+.filterControls {
+    display: flex;
+    align-items: center;
+}
+
+.filter_toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.filterName {
+    border-bottom: 1px solid gray;
+}
+
+.mobileFilterText {
+    display: none;
+    color: #000;
+    /* font-weight: bold; */
+    background-color: white;
+}
+
+.toggleButton {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.filter_dropdown {
+    justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+    .filterWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filterHeader {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .itemCount {
+        display: none;
+    }
+
+    .filterControls {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .filterName {
+        display: none;
+    }
+
+    .filterIcon {
+        display: none;
+    }
+
+    .mobileFilterText {
+        display: block;
+    }
+
+    .filterControls::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 20px;
+        width: 1px;
+        background-color: rgb(232, 229, 229);
+    }
+
+    .toggleButton {
+        padding: 0 20px;
+    }
+
+    .filter_dropdown {
+        justify-self: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,228 @@
+.container {
+    margin: 0 auto;
+}
+
+.homepage {
+    display: flex;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px; 
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    flex: 1 1 calc(25% - 13px); 
+    max-width: calc(25% - 13px);
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    max-width: 80%;
+}
+
+.rectangle {
+    display: flex;
+    justify-content: space-between;
+    gap: 5;
+    max-width: 300px;
+}
+
+.subhead {
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+}
+
+.signin {
+    border-bottom: 1px solid gray;
+}
+
+.signin:hover {
+    color: blue;
+}
+
+.clicked {
+    fill: red;
+}
+
+.filterContainer {
+    background-color: #fff;
+    padding: 3% 1% 0 0;
+    font-family: sans-serif;
+}
+
+.filterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.itemCount {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.hideFilter {
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.hideIcon{
+    margin-right: 5px;
+}
+
+.filterBody {
+    /* display: flex;
+    flex-direction: column; */
+    width: 200px;
+}
+
+.customizable {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.customizable label{
+    margin-left: 5px;
+}
+
+.filterSection {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.sectionTitle {
+    flex-grow: 1; 
+}
+
+.dropdownIcon {
+    font-size: 16px;
+    color: #999;
+}
+
+.sectionContent {
+    padding-left: 15px;
+    margin-top: 10px;
+}
+.noOptions{
+    font-size: 13px;
+    color: #999;
+}
+
+.filterOption {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #333;
+}
+.filterOption label{
+    margin-left: 5px;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.33% - 13px); 
+        max-width: calc(33.33% - 13px);
+    }
+    .homepage {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1000px) {
+    .filterContainer {
+        z-index: 10; 
+        position: absolute;
+        top: 0;
+        left: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 13px); 
+        max-width: calc(50% - 13px);
+    }
+    .homepage {
+        display: block;
+        position: relative;
+    }
+    .filterContainer {
+        z-index: 10; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+    .homepage {
+        display: block;
+        position: relative;
+    }
+    .filterContainer {
+        z-index: 10; 
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+    }
+
+}
